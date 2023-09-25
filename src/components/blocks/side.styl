@@ -1,0 +1,126 @@
+.ex-side
+  box-sizing border-box
+  position fixed
+  width 190px
+  overflow-y auto
+  overflow-x hidden
+  -webkit-overflow-scrolling touch
+  text-transform capitalize
+  height 100%
+  padding-bottom 30px
+  top 0
+  padding-top 80px
+  -ms-overflow-style none
+  background-color var(--geist-background)
+
+  &::-webkit-scrollbar {
+    width 0
+    background-color transparent
+  }
+
+  li
+    list-style none
+    position relative
+
+    &:before
+      content ''
+
+  ul
+    margin-left 0
+
+  > ul
+    margin-bottom 3rem
+
+.bar-bg
+  position fixed
+  top 0
+  left 0
+  right 0
+  height 0
+  width 100%
+  z-index -1
+  background-color var(--geist-background)
+
+  &.active
+    height 100%
+
+.bar
+  display none
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 10000
+  height 3.7rem
+  background-color var(--geist-background)
+  align-items center
+  justify-content space-between
+  padding 0 3rem 0 1rem
+  color #fafafa
+
+  > .toggle-container
+    width 3rem
+    height 25px
+    padding 0
+    background-color transparent
+    border none
+    cursor pointer
+    outline none
+
+  .bar-toggle
+    width 15px
+    height 15px
+    display inline-flex
+
+  > .bar-title
+    color var(--accents-7)
+    font-size 12px
+    display inline-flex
+    text-transform uppercase
+
+.component
+  color var(--geist-foreground)
+  font-size 14px
+  font-weight normal
+  padding-right 10px
+  padding-left 3px
+  transition all .15 ease-in-out
+
+  &.router-link-active
+    font-weight bold
+    background-color var(--accents-7)
+    color var(--geist-background)
+    text-transform uppercase
+    &:after
+      font-weight bold
+
+@media only screen and (max-width $SCREEN_SM)
+  .ex-side
+    top 0
+    left 0
+    right 0
+    height 3rem
+    z-index 1000
+    width 100%
+    padding 3.7rem 3rem 0
+    text-align center
+    background-color #fff
+    transition height .2s ease-in-out
+    box-shadow 0 2px 5px 0 rgba(0, 0, 0, .12)
+
+    &.active
+      height 90vh
+
+    .bar
+      display flex
+
+    li
+      width 100%
+      height 50px
+      line-height 50px
+      text-align left
+      border-bottom 1px solid var(--accents-2)
+
+    .zi-title
+      text-align left
+      display block

@@ -1,0 +1,78 @@
+.zi-fieldset
+  background-color var(--geist-background)
+  border 1px solid var(--accents-2)
+  border-radius 5px
+  overflow hidden
+
+.zi-fieldset-content
+  background-color var(--geist-background)
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  font-size rem(13)
+  padding var(--geist-gap)
+
+  h1, h2, h3, h4, h5, h6
+    font-size rem(20)
+    line-height 1.5
+    margin 0
+    display inline-flex
+    word-break break-word
+
+  p
+    font-size rem(14)
+    line-height 1.6
+    margin var(--geist-gap-half) 0
+
+  > :last-child
+    margin-bottom 0
+
+  > :first-child
+    margin-top 0
+
+.zi-fieldset-footer
+  background-color var(--accents-1)
+  border-top 1px solid var(--accents-2)
+  border-bottom-left-radius: 3px
+  border-bottom-right-radius: 3px
+  color var(--accents-6)
+  display flex
+  justify-content space-between
+  align-items center
+  font-size rem(12)
+  padding var(--geist-gap-half) var(--geist-gap)
+  box-sizing border-box
+
+  p, span, div
+    font-size rem(12)
+    line-height rem(24)
+    margin 0
+
+
+.disabled .zi-fieldset, .disabled .zi-fieldset-content, .disabled .zi-fieldset-footer
+  background-color var(--accents-1)
+  color var(--accents-3)
+
+  button
+    background var(--accents-1) !important
+    border-color var(--accents-2) !important
+    color #ccc !important
+    cursor not-allowed !important
+
+
+.zi-dark-theme
+  .zi-fieldset
+    border-color var(--accents-7)
+
+  .zi-fieldset-content
+    background-color black
+
+    > div, p, span, h1, h2, h3
+      color white
+
+  .zi-fieldset-footer
+    background-color #111
+    border-color #111
+    color #999
+
+    > div, p, span
+      color #999

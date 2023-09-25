@@ -1,0 +1,56 @@
+.zi-tooltip
+  position relative
+  width max-content
+  text-align center
+  align-items center
+  justify-content center
+
+.zi-tooltip-box
+  visibility hidden
+  opacity 0
+  position absolute
+  background-color var(--geist-foreground)
+  border-radius var(--geist-radius)
+  color var(--geist-background)
+  padding .5rem .75rem
+  font-size .75rem
+  box-shadow rgba(0, 0, 0, 0.12) 0px 5px 40px 0px
+  font-weight normal
+  text-align center
+  z-index 2000
+
+  &.visible
+    visibility visible
+    opacity 1
+
+.zi-tooltip-arrow,
+.zi-tooltip-arrow::before
+  position: absolute
+  width: 8px
+  height: 8px
+  z-index: -1
+
+.zi-tooltip-arrow::before
+  content: ''
+  transform: rotate(45deg)
+  background: var(--geist-foreground)
+
+.zi-tooltip-box[data-popper-placement^=bottom] .zi-tooltip-arrow
+  top -4px
+  margin-left -4px
+
+.zi-tooltip-box[data-popper-placement^=top] .zi-tooltip-arrow
+  bottom -4px
+  margin-left -4px
+
+.zi-tooltip-box[data-popper-placement^=left] .zi-tooltip-arrow
+  right 0
+
+.zi-tooltip-box[data-popper-placement^=right] .zi-tooltip-arrow
+  left -8px
+
+.zi-tooltip-inner
+  width: max-content
+
+  p
+    margin 0
